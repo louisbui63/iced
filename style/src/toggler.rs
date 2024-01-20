@@ -2,7 +2,7 @@
 use iced_core::Color;
 
 /// The appearance of a toggler.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Appearance {
     /// The background [`Color`] of the toggler.
     pub background: Color,

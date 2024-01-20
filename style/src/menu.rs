@@ -2,7 +2,7 @@
 use iced_core::{Background, BorderRadius, Color};
 
 /// The appearance of a menu.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Appearance {
     /// The text [`Color`] of the menu.
     pub text_color: Color,

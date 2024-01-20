@@ -18,6 +18,7 @@ smol_str.workspace = true
 thiserror.workspace = true
 web-time.workspace = true
 xxhash-rust.workspace = true
+serde = "1.0"
 
 palette.workspace = true
 palette.optional = true

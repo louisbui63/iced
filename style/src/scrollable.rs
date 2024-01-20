@@ -2,7 +2,7 @@
 use iced_core::{Background, BorderRadius, Color};
 
 /// The appearance of a scrollable.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Scrollbar {
     /// The [`Background`] of a scrollable.
     pub background: Option<Background>,
@@ -17,7 +17,7 @@ pub struct Scrollbar {
 }
 
 /// The appearance of the scroller of a scrollable.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Scroller {
     /// The [`Color`] of the scroller.
     pub color: Color,

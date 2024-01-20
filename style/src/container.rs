@@ -2,7 +2,7 @@
 use crate::core::{Background, BorderRadius, Color, Pixels};
 
 /// The appearance of a container.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize)]
 pub struct Appearance {
     /// The text [`Color`] of the container.
     pub text_color: Option<Color>,

@@ -158,7 +158,7 @@ wasm-bindgen-futures = "0.4"
 wasm-timer = "0.2"
 web-sys = "0.3"
 web-time = "0.2"
-wgpu = "0.18"
+wgpu = "0.18.0"
 winapi = "0.3"
 window_clipboard = "0.3"
 winit = { git = "https://github.com/iced-rs/winit.git", rev = "b91e39ece2c0d378c3b80da7f3ab50e17bb798a5", features = ["rwh_05"] }

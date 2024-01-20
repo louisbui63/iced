@@ -7,8 +7,16 @@ use std::ops::RangeInclusive;
 #[derive(Debug, Copy, Clone, PartialEq, PartialOrd)]
 pub struct Degrees(pub f32);
 
-/// Radians
-#[derive(Debug, Copy, Clone, PartialEq, PartialOrd)]
+/// radians
+#[derive(
+    Debug,
+    Copy,
+    Clone,
+    PartialEq,
+    PartialOrd,
+    serde::Serialize,
+    serde::Deserialize,
+)]
 pub struct Radians(pub f32);
 
 impl Radians {

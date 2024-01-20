@@ -2,7 +2,7 @@
 use iced_core::{Background, BorderRadius, Color};
 
 /// The appearance of a text input.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Appearance {
     /// The [`Background`] of the text input.
     pub background: Background,

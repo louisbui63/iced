@@ -2,7 +2,7 @@
 use iced_core::{Background, Border, Color, Shadow, Vector};
 
 /// The appearance of a button.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize)]
 pub struct Appearance {
     /// The amount of offset to apply to the shadow of the button.
     pub shadow_offset: Vector,

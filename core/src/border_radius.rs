@@ -1,6 +1,8 @@
 /// The border radii for the corners of a graphics primitive in the order:
 /// top-left, top-right, bottom-right, bottom-left.
-#[derive(Debug, Clone, Copy, PartialEq, Default)]
+#[derive(
+    Debug, Clone, Copy, PartialEq, Default, serde::Serialize, serde::Deserialize,
+)]
 pub struct BorderRadius([f32; 4]);
 
 impl From<f32> for BorderRadius {

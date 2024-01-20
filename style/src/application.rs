@@ -13,7 +13,9 @@ pub trait StyleSheet {
 }
 
 /// The appearance of an application.
-#[derive(Debug, Clone, Copy, PartialEq)]
+#[derive(
+    Debug, Clone, Copy, PartialEq, serde::Serialize, serde::Deserialize, Default,
+)]
 pub struct Appearance {
     /// The background [`Color`] of the application.
     pub background_color: Color,

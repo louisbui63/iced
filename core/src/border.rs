@@ -2,7 +2,9 @@
 use crate::Color;
 
 /// A border.
-#[derive(Debug, Clone, Copy, PartialEq, Default)]
+#[derive(
+    Debug, Clone, Copy, PartialEq, Default, serde::Serialize, serde::Deserialize,
+)]
 pub struct Border {
     /// The color of the border.
     pub color: Color,
@@ -26,7 +28,9 @@ impl Border {
 
 /// The border radii for the corners of a graphics primitive in the order:
 /// top-left, top-right, bottom-right, bottom-left.
-#[derive(Debug, Clone, Copy, PartialEq, Default)]
+#[derive(
+    Debug, Clone, Copy, PartialEq, Default, serde::Serialize, serde::Deserialize,
+)]
 pub struct Radius([f32; 4]);
 
 impl From<f32> for Radius {

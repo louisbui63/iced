@@ -2,7 +2,7 @@
 use iced_core::{Background, Color};
 
 /// The appearance of a radio button.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Appearance {
     /// The [`Background`] of the radio button.
     pub background: Background,

@@ -1,7 +1,9 @@
 use crate::{Color, Vector};
 
 /// A shadow.
-#[derive(Debug, Clone, Copy, PartialEq, Default)]
+#[derive(
+    Debug, Clone, Copy, PartialEq, Default, serde::Serialize, serde::Deserialize,
+)]
 pub struct Shadow {
     /// The color of the shadow.
     pub color: Color,

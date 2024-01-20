@@ -13,6 +13,7 @@ keywords.workspace = true
 [dependencies]
 iced_core.workspace = true
 iced_core.features = ["palette"]
+serde = "1.0"
 
 palette.workspace = true
 once_cell.workspace = true

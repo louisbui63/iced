@@ -3,7 +3,7 @@ use crate::container;
 use crate::core::{Background, Border, Color};
 
 /// The appearance of a scrolable.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Appearance {
     /// The [`container::Appearance`] of a scrollable.
     pub container: container::Appearance,
@@ -14,7 +14,7 @@ pub struct Appearance {
 }
 
 /// The appearance of the scrollbar of a scrollable.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Scrollbar {
     /// The [`Background`] of a scrollbar.
     pub background: Option<Background>,
@@ -25,7 +25,7 @@ pub struct Scrollbar {
 }
 
 /// The appearance of the scroller of a scrollable.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, serde::Serialize, serde::Deserialize, Default)]
 pub struct Scroller {
     /// The [`Color`] of the scroller.
     pub color: Color,

@@ -3,7 +3,9 @@ use crate::{Color, Radians};
 
 use std::cmp::Ordering;
 
-#[derive(Debug, Clone, Copy, PartialEq)]
+#[derive(
+    Debug, Clone, Copy, PartialEq, serde::Serialize, serde::Deserialize,
+)]
 /// A fill which transitions colors progressively along a direction, either linearly, radially (TBD),
 /// or conically (TBD).
 pub enum Gradient {
@@ -32,7 +34,9 @@ impl From<Linear> for Gradient {
     }
 }
 
-#[derive(Debug, Default, Clone, Copy, PartialEq)]
+#[derive(
+    Debug, Default, Clone, Copy, PartialEq, serde::Serialize, serde::Deserialize,
+)]
 /// A point along the gradient vector where the specified [`color`] is unmixed.
 ///
 /// [`color`]: Self::color
@@ -47,7 +51,9 @@ pub struct ColorStop {
 }
 
 /// A linear gradient.
-#[derive(Debug, Clone, Copy, PartialEq)]
+#[derive(
+    Debug, Clone, Copy, PartialEq, serde::Serialize, serde::Deserialize,
+)]
 pub struct Linear {
     /// How the [`Gradient`] is angled within its bounds.
     pub angle: Radians,
